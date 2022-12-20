@@ -1,0 +1,95 @@
+<!-- [ navigation menu ] start -->
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="/" class="b-brand">
+                <div class="b-bg">
+                    <img src="{{ ASSETS_ROOT }}/images/logo-thumb.png" width="80%" height="80%">
+                    <!--<i class="feather icon-trending-up"></i>-->
+                </div>
+                <span class="b-title">SamRise</span>
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Navigation</label>
+                </li>
+                <li data-username="Dashboard" 
+                    class="nav-item {% if 'index' in segment %} active {% endif %}">
+                    <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
+                            class="pcoded-mtext">Dashboard</span></a>
+                </li>
+                <li data-username="KPIs Page"
+                    class="nav-item pcoded-hasmenu">
+                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span
+                            class="pcoded-mtext">KPIs</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class="nav-item {% if 'turnover' in segment %} active {% endif %}"><a href="/turnover.html" class="" >Turnover</a></li>
+                        <li class="nav-item {% if 'absenteism' in segment %} active {% endif %}"><a href="/absenteism.html" class="" >Taux d'absentéisme</a></li>
+                        <li class="nav-item {% if 'assiduite' in segment %} active {% endif %}"><a href="/assiduite.html" class="" >Assiduité</a></li>
+                    </ul>
+                </li>             
+                <li data-username="KPIs Page"
+                    class="nav-item pcoded-hasmenu">
+                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-trending-up"></i></span><span
+                            class="pcoded-mtext">Prédiction</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class="nav-item {% if 'prediction' in segment %} active {% endif %}"><a href="{% url 'prediction_quitter' %}" class="" >Si un employée va quitter</a></li>
+                        <li class="nav-item {% if 'prediction' in segment %} active {% endif %}"><a href="{% url 'prediction_conge' %}" class="" >Nombre de congés (2014)</a></li>
+                    </ul>
+                </li> 
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Données</label>
+                </li>
+                <li data-username="form elements advance componant validation masking wizard picker select"
+                    class="nav-item {% if 'files' in segment %} active {% endif %}">
+                    <a href="/files.html" class="nav-link "><span class="pcoded-micon"><i
+                            class="feather icon-file-text"></i></span><span
+                            class="pcoded-mtext">Fichiers</span></a>
+                </li>
+                <li data-username="Datawarehouse"
+                    class="nav-item pcoded-hasmenu">
+                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span
+                            class="pcoded-mtext">Data Warehouse</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class=""><a href="{% url 'categorie' %}" class="">Catégories</a></li>
+                        <li class=""><a href="{% url 'employee' %}" class="">Employés</a></li>
+                        <li class=""><a href="{% url 'etatcivil' %}" class="">Etats Civil</a></li>
+                        <li class=""><a href="{% url 'fonction' %}" class="">Fonctions</a></li>
+                        <li class=""><a href="{% url 'modepaiement' %}" class="">Modes Paiement</a></li>
+                        <li class=""><a href="{% url 'motifconge' %}" class="">Motifs Congés</a></li>
+                        <li class=""><a href="{% url 'service' %}" class="">Services</a></li>
+                        <li class=""><a href="{% url 'typeconge' %}" class="">Types Congés</a></li>
+                        <li class=""><a href="{% url 'typecontrat' %}" class="">Types Contrat</a></li>
+                        <li class=""><a href="{% url 'typesalaire' %}" class="">Types Salaire</a></li>
+                        <li class=""><a href="{% url 'conge' %}" class="">Congés</a></li>
+                        <li class=""><a href="{% url 'salaire' %}" class="">Salaires</a></li>
+                    </ul>
+                </li> 
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Authentification</label>
+                </li>
+                
+                <li data-username="Disabled Menu" class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Se déconnecter</span>
+                    </a>
+                </li>
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Support</label>
+                </li>                    
+                <li data-username="Support Page" class="nav-item ">
+                    <a target="_blank" href="https://www.samrise.cloud" class="nav-link">
+                        <span class="pcoded-micon">
+                            <i class="feather icon-headphones"></i>
+                        </span>
+                        <span class="pcoded-mtext">Contactez-Nous</span>
+                    </a>
+                </li>                
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- [ navigation menu ] end -->

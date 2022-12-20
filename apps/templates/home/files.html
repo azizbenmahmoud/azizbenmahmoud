@@ -1,0 +1,84 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Fichiers {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Fichiers</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">Fichiers</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Accédez aux fichiers</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <a href="{% url 'open_categorie_file' %}"><button type="button" class="btn btn-dark" title="Catégories" data-toggle="tooltip">Catégories</button></a>
+                                            <a href="{% url 'open_conge_file' %}"><button type="button" class="btn btn-dark" title="Congés" data-toggle="tooltip">Congés</button></a>
+                                            <a href="{% url 'open_etatcivil_file' %}"><button type="button" class="btn btn-dark" title="Etats Civil" data-toggle="tooltip">Etats Civil</button></a>
+                                            <a href="{% url 'open_fonction_file' %}"><button type="button" class="btn btn-dark" title="Fonction" data-toggle="tooltip">Fonction</button></a>
+                                            <a href="{% url 'open_historique_file' %}"><button type="button" class="btn btn-dark" title="Hitorique Employés" data-toggle="tooltip">Hitorique Employés</button></a>
+                                            <a href="{% url 'open_modesp_file' %}"><button type="button" class="btn btn-dark" title="Modes Paiement" data-toggle="tooltip">Modes Paiement</button></a>
+                                            <a href="{% url 'open_motifs_file' %}"><button type="button" class="btn btn-dark" title="Motifs Congés" data-toggle="tooltip">Motifs Congés</button></a>
+                                            <a href="{% url 'open_personnel_file' %}"><button type="button" class="btn btn-dark" title="Personnel" data-toggle="tooltip">Personnel</button></a>
+                                            <a href="{% url 'open_salaire_file' %}"><button type="button" class="btn btn-dark" title="Salaires" data-toggle="tooltip">Salaires</button></a>
+                                            <a href="{% url 'open_service_file' %}"><button type="button" class="btn btn-dark" title="Services" data-toggle="tooltip">Services</button></a>
+                                            <a href="{% url 'open_tconge_file' %}"><button type="button" class="btn btn-dark" title="Types Congés" data-toggle="tooltip">Types Congés</button></a>
+                                            <a href="{% url 'open_tcontrat_file' %}"><button type="button" class="btn btn-dark" title="Types Contrats" data-toggle="tooltip">Types Contrats</button></a>
+                                            <a href="{% url 'open_tsalaire_file' %}"><button type="button" class="btn btn-dark" title="Types Salaires" data-toggle="tooltip">Types Salaires</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Data Warehouse</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <a href="{% url 'files' %}"><button type="button" class="btn btn-outline-warning" title="Mise à jour Data Warehouse" data-toggle="tooltip">Mise à jour Data Warehouse</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
+ 

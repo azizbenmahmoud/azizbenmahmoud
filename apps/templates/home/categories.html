@@ -1,0 +1,111 @@
+{% extends "layouts/base.html" %} {% block title %} Data {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ ASSETS_ROOT }}/css/pagination.css" />
+{% endblock stylesheets %} 
+{% block content %}
+
+<!-- [ Main Content ] start -->
+<section class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10">Datawarehouse Tables</h5>
+                </div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="/"><i class="feather icon-home"></i></a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                  <li class="breadcrumb-item"><a href="#">Catégories</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <div class="main-body">
+          <div class="page-wrapper">
+            <!-- [ Main Content ] start -->
+            <div class="row">
+              <!-- [ basic-table ] start -->
+              <div class="col-xl-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Catégories</h5>
+                  </div>
+                  <div class="card-block table-border-style">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Label</th>
+                            <th>Titre</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for category in categories %}
+                          <tr>
+                            <th scope="row">{{ category.categorieid }}</th>
+                            <td>{{ category.label }}</td>
+                            <td>{{ category.titre }}</td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                      {% if categories.has_other_pages %}
+                      <div class="pagination">
+                        {% if categories.has_previous %}
+                        <li>
+                          <a class="pagination-action" href="?page={{ categories.previous_page_number }}">&laquo;</a
+                          >
+                        </li>
+                        {% else %}
+                        <li class="disabled"><span>&laquo;</span></li>
+                        {% endif %} 
+                        {% for i in categories.paginator.page_range %} 
+                        {% if categories.number == i %}
+                        <li class="active">
+                          <span class="pagination-number pagination-current">{{ i }}<span class="sr-only">(current)</span></span>
+                        </li>
+                        {% else %}
+                        <li><a class="pagination-action" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %} 
+                        {% endfor %} 
+                        {% if categories.has_next %}
+                        <li>
+                          <a href="?page={{ categories.next_page_number }}">&raquo;</a
+                          >
+                        </li>
+                        {% else %}
+                        <li class="disabled"><span>&raquo;</span></li>
+                        {% endif %}
+                      </ul>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- [ basic-table ] end -->
+            </div>
+            <!-- [ Main Content ] end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
