@@ -1,13 +1,7 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 # Create your views here.
-
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from .forms import LoginForm, SignUpForm
+from .forms import LoginForm,SignUpForm
 
 
 def login_view(request):
@@ -16,7 +10,6 @@ def login_view(request):
     msg = None
 
     if request.method == "POST":
-        {'% csrf_token %'}
 
         if form.is_valid():
             username = form.cleaned_data.get("username")
@@ -30,7 +23,7 @@ def login_view(request):
         else:
             msg = 'Error validating the form'
 
-    return render(request, "home/absenteism.html", {"form": form, "msg": msg})
+    return render(request, "accounts/login.html", {"form": form, "msg": msg})
 
 
 def register_user(request):
@@ -56,4 +49,4 @@ def register_user(request):
         form = SignUpForm()
 
     return render(request, "accounts/register.html", {"form": form, "msg": msg, "success": success})
-
+    
