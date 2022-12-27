@@ -21,6 +21,13 @@
                     <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
                             class="pcoded-mtext">Dashboards</span></a>
                 </li>
+                
+                <li data-username="Disabled Menu" class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Se déconnecter</span>
+                    </a>
+                </li>
+                <!--
                 <li data-username="KPIs Page"
                     class="nav-item pcoded-hasmenu">
                     <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span
@@ -29,7 +36,7 @@
                         <li class="nav-item {% if 'turnover' in segment %} active {% endif %}"><a href="/turnover.html" class="" >Turnover</a></li>
                         
                     </ul>
-                </li>   
+                </li>-->   
                 <li data-username="Support Page" class="nav-item ">
                     <a target="_blank" href="https://www.samrise.cloud" class="nav-link">
                         <span class="pcoded-micon">
