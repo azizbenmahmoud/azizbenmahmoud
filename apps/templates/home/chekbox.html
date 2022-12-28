@@ -1,0 +1,109 @@
+{% extends "layouts/base.html" %} {% block title %} Data {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ ASSETS_ROOT }}/css/pagination.css" />
+{% endblock stylesheets %} 
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            <legend>
+                Sizing
+            </legend>
+            <p>
+                Supports bootstrap sizing class: <code>.checkbox-sm</code>, <code>.checkbox-md</code>, <code>.checkbox-lg</code>.
+            </p>
+            <div class="checkbox checkbox-inline checkbox-sm">
+                <input type="checkbox" class="styled" id="inlineCheckbox1smd" value="option1" disabled>
+                <label for="inlineCheckbox1smd"> Disabled small </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-circle checkbox-sm">
+                <input type="checkbox" class="styled" id="inlineCheckbox1smc" value="option1">
+                <label for="inlineCheckbox1smc"> Circled small </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-primary checkbox-sm">
+                <input type="checkbox" class="styled" id="inlineCheckbox2sm" value="option2">
+                <label for="inlineCheckbox2sm"> Primary small </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-success checkbox-sm">
+                <input type="checkbox" class="styled" id="inlineCheckbox3sm" value="option3">
+                <label for="inlineCheckbox3sm"> Success small </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-info checkbox-sm">
+                <input type="checkbox" class="styled" id="inlineCheckbox4sm" value="option4">
+                <label for="inlineCheckbox4sm"> Info small </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-warning checkbox-sm">
+                <input type="checkbox" class="styled" id="inlineCheckbox5sm" value="option5">
+                <label for="inlineCheckbox5sm"> Warning small </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-danger checkbox-sm">
+                <input type="checkbox" class="styled" id="inlineCheckbox6sm" value="option6">
+                <label for="inlineCheckbox6sm"> Danger small </label>
+            </div>
+            <br/><br/>
+            <div class="checkbox checkbox-inline checkbox-md">
+                <input type="checkbox" class="styled" id="inlineCheckbox1mdd" value="option1" disabled>
+                <label for="inlineCheckbox1mdd"> Disabled medium </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-circle checkbox-md">
+                <input type="checkbox" class="styled" id="inlineCheckbox1mdc" value="option1">
+                <label for="inlineCheckbox1mdc"> Circled medium </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-primary checkbox-md">
+                <input type="checkbox" class="styled" id="inlineCheckbox2md" value="option2">
+                <label for="inlineCheckbox2md"> Primary </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-success checkbox-md">
+                <input type="checkbox" class="styled" id="inlineCheckbox3md" value="option3">
+                <label for="inlineCheckbox3md"> Success medium </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-info checkbox-md">
+                <input type="checkbox" class="styled" id="inlineCheckbox4md" value="option4">
+                <label for="inlineCheckbox4md"> Info medium </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-warning checkbox-md">
+                <input type="checkbox" class="styled" id="inlineCheckbox5md" value="option5">
+                <label for="inlineCheckbox5md"> Warning medium </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-danger checkbox-md">
+                <input type="checkbox" class="styled" id="inlineCheckbox6md" value="option6">
+                <label for="inlineCheckbox6md"> Danger medium </label>
+            </div>
+            <br/><br/>
+            <div class="checkbox checkbox-inline checkbox-lg">
+                <input type="checkbox" class="styled" id="inlineCheckbox1lgd" value="option1" disabled>
+                <label for="inlineCheckbox1lgd"> Disabled large </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-circle checkbox-lg">
+                <input type="checkbox" class="styled" id="inlineCheckbox1lgc" value="option1">
+                <label for="inlineCheckbox1lgc"> Circled large </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-primary checkbox-lg">
+                <input type="checkbox" class="styled" id="inlineCheckbox2lg" value="option2">
+                <label for="inlineCheckbox2lg"> Primary large </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-success checkbox-lg">
+                <input type="checkbox" class="styled" id="inlineCheckbox3lg" value="option3">
+                <label for="inlineCheckbox3lg"> Success large </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-info checkbox-lg">
+                <input type="checkbox" class="styled" id="inlineCheckbox4lg" value="option4">
+                <label for="inlineCheckbox4lg"> Info large </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-warning checkbox-lg">
+                <input type="checkbox" class="styled" id="inlineCheckbox5lg" value="option5">
+                <label for="inlineCheckbox5lg"> Warning large </label>
+            </div>
+            <div class="checkbox checkbox-inline checkbox-danger checkbox-lg">
+                <input type="checkbox" class="styled" id="inlineCheckbox6lg" value="option6">
+                <label for="inlineCheckbox6lg"> Danger large </label>
+            </div>
+        </fieldset>
+    </div>
+    {% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
